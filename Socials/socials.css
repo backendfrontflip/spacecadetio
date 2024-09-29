@@ -21,10 +21,7 @@
 
 html {
     font-size: 62.5%;
-    background-image: url(./images/ahad1.jpeg.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: solid black;
 }
 
 body {
