@@ -21,7 +21,6 @@
 
 html {
     font-size: 62.5%;
-    background-color: solid black;
 }
 
 body {
@@ -29,6 +28,7 @@ body {
     font-size: 1.4rem;
     font-weight: var(--fw-normal);
     min-height: 100vh;
+    background-color: black;
     display: grid;
     place-content: center;
 }
