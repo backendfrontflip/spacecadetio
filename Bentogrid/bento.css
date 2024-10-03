@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --Purple100: hsl(254, 88%, 90%);
+    --Purple500: hsl(256, 67%, 59%);
+    --Yellow100: hsl(31, 66%, 93%);
+    --Yellow500: hsl(39, 100%, 71%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 7%);
+  }
+  
+  body {
+    background-color: #F5F5F5;
+    ;
+  }
+  .container-main {
+    display: grid;
+    gap: 2rem;
+    margin: 2.5rem 1rem 2.5rem 1rem;
+  
+  }
+  
+  .container-1 {
+    background-color: var(--Purple500);
+    overflow: hidden;
+    text-align: center;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 3rem;
+  }
+  
+  .p1 {
+    color: var(--White);
+    font-size: 2.8rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    line-height: .9;
+  
+  }
+  
+  .container-1 img {
+    height: 30px;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .b1 {
+    color: var(--Yellow500);
+  }
+  
+  .p2 {
+    color: var(--Yellow100);
+    font-family: "DM Sans", sans-serif;
+    font-size: large;
+  }
+  
+  .container-2 {
+    background-color: var(--White);
+    display: inline-block;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .container-2 img {
+    height: 65px;
+  }
+  
+  .p3 {
+    color: var(--Black);
+    font-size: 1.5rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    line-height: .9;
+    letter-spacing: -1px;
+  }
+  
+  .container-3 {
+    background-color: var(--Yellow500);
+    display: inline-block;
+    border-radius: 12px;
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+  
+  .container-3 img {
+    margin-top: 1rem;
+    height: 135px;
+    width: 208px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  
+  .container-4 {
+    background-color: var(--Purple100);
+    display: inline-block;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .container-4 img {
+    height: 275px;
+  }
+  
+  .p4 {
+    color: var(--Black);
+    font-size: 1.5rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    line-height: .9;
+    letter-spacing: -1px;
+    padding: 1rem;
+  }
+  
+  .p5 {
+    color: var(--Black);
+    font-size: 1.05rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .container-5 {
+    background-color: var(--Purple500);
+    display: inline-block;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .container-5 img {
+    height: 190px;
+  }
+  
+  .p6 {
+    color: var(--White);
+    font-size: 2rem;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    padding: 2rem;
+    padding-bottom: .5rem;
+  }
+  
+  .container-6 {
+    background-color: var(--White);
+    display: inline-block;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .container-6 img {
+    height: 65px;
+    margin-right: 8.5rem;
+  }
+  
+  .b2 {
+    font-size: 3rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+  }
+  
+  .p7 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .container-7 {
+    background-color: var(--Yellow100);
+    display: inline-block;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .container-7 img {
+    height: 82px;
+    margin: 5px 0 20px 16px;
+  }
+  
+  .p8 {
+    color: var(--Black);
+    font-size: 1.9rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    line-height: .9;
+    letter-spacing: -1px;
+    padding: 1rem;
+  }
+  
+  .b3 {
+    color: var(--Purple500);
+  }
+  
+  .container-8 {
+    background-color: var(--Yellow500);
+    display: inline-block;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .container-8 img {
+    height: 224px;
+    margin: 10px 0px 12px 16px;
+  }
+  
+  @media screen and (min-width: 500px) {
+    .container-main {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin: 3rem 3rem 3rem 3rem;
+    }
+  
+    .container-7 {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+    .container-1 {
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 1;
+    }
+    .container-4 {
+      grid-column-start: 4;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+    .container-8 {
+      grid-column-start: 1;
+      grid-row-start: 2;
+      grid-row-end: 4;
+    }
+    .container-6 {
+      grid-column-start: 2;
+      grid-row-start: 3;
+    }
+    .container-5 {
+      grid-column-start: span 2;
+    }
+  }
