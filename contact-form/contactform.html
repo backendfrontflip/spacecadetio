@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="contact-form.css">
+  
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  <div class="contact-form">
+    <h1>Contact Us</h1>
+
+    <form id="contact-form">
+      <div class="form-item">
+        <div class="first-name">
+          <label for="first-name">First Name <span class="required-input">*</span>
+          </label>
+          <input type="text" name="first-name" id="first-name">
+          <p class="form-alert">This field is required</p>
+        </div>
+
+        <div class="last-name">
+          <label for="last-name">Last Name <span class="required-input">*</span></label>
+          <input type="text" name="last-name" id="last-name">
+          <p class="form-alert">This field is required</p>
+        </div>
+      </div>
+
+      <div class="form-item">
+        <label for="email">Email Address <span class="required-input">*</span></label>
+        <input type="email" name="email" id="email">
+        <p class="form-alert">Please enter a valid email address</p>
+      </div>
+
+      <div class="form-item">
+        <label for="query-type">Query Type <span class="required-input"></span>*</label>
+
+        <div class="radio-inputs">
+          <div class="radio-option">
+            <input type="radio" id="general-enquiry" name="query-type" value="General Enquiry">
+            <label for="general-enquiry">General Enquiry</label>
+          </div>
+          
+          <div class="radio-option">
+            <input type="radio" id="support-request" name="query-type" value="Support Request">
+            <label for="support-request">Support Request</label>
+          </div>
+        </div>
+
+        <p class="form-alert">Please select a query type</p>
+      </div>
+
+      <div class="form-item">
+        <label for="message">Message <span class="required-input">*</span></label>
+        <textarea name="message" id="message" rows="4"></textarea>
+        <p class="form-alert">This field is required</p>
+      </div>
+
+      <div class="form-item">
+        <div>
+          <input type="checkbox" name="consent" id="consent">
+          <label for="consent">I consent to being contacted by the team <span class="required-input">*</span></label>
+        </div>
+
+        <p class="form-alert">To submit this form, please consent to being contacted</p>
+      </div>
+
+      <button type="submit" id="submit-butn" class="submit-btn">Submit</button>
+     </form>
+  </div>
+
+  <div id="success-message" class="success-message">
+    <div class="message-header">
+      <img src="assets/images/icon-success-check.svg" alt="">
+      Message Sent!
+    </div>
+
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://backendfrontflip.github.io/spacecadetio/Socials/socials.html?fbclid=PAZXh0bgNhZW0CMTEAAabFp9fEE_4fLr7EkFU_A5yVvNfuzEC3uf6EDpOGaX00M3Lfiur2U9GGGxI_aem_B8FgTY0lbmdS6kxU0xSgGw">Space Cadet</a>.
+  </div>
+  
+  <script src="contactform.js"></script>
+</body>
+</html>
