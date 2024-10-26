@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'HankenGrotesk';
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(fonts/HankenGrotesk-VariableFont_wght.ttf)
+         format('truetype');
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+:root {
+    --clr-light-red: hsl(0, 100%, 67%);
+    --clr-orangey-yellow: hsl(39, 100%, 56%);
+    --clr-green-teal: hsl(166, 100%, 37%);
+    --clr-cobalt-blue: hsl(234, 85%, 45%);
+    --clr-light-slate-blue-background: hsl(252, 100%, 67%);
+    --clr-light-royal-blue-background: hsl(241, 81%, 54%);
+    --clr-violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --clr-persian-blue-circle: hsla(241, 72%, 46%, 0);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-pale-blue: hsl(221, 100%, 96%);
+    --clr-light-lavender: hsl(241, 100%, 89%);
+    --clr-dark-gray-blue: hsl(224, 30%, 27%);
+    --font-family: 'HankenGrotesk';
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-pale-blue);
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, .24) 0px 3px 8px;
+    border-radius: 2rem;
+    width: 650px;
+    background-color: var(--clr-white);
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.result {
+    width: 50%;
+    padding: 1.5em 2rem;
+    border-radius: 2rem;
+    background: linear-gradient(to bottom, var(--clr-light-slate-blue-background),var(--clr-light-royal-blue-background));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.result .title {
+    color: var(--clr-light-lavender);
+    margin-bottom: 1rem;
+}
+
+.result .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, var(--clr-violet-blue-circle), var(--clr-persian-blue-circle));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circle h1 {
+    color: var(--clr-white);
+    font-size: 4rem;
+}
+
+.circle p {
+    color: var(--clr-light-lavender);
+}
+
+.result b {
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.result .info {
+    color: var(--clr-light-lavender);
+    width: 200px;
+}
+
+.summary {
+    width: 50%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summary .title {
+    color: hsl(0, 0, 0);
+    font-weight: 800;
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.row {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+}
+
+.row:nth-child(1) {
+    background-color: hsla(0, 100%, 67%, .2);
+}
+
+.row:nth-child(1) .badge b {
+    color: var(--clr-light-red);
+}
+
+.row:nth-child(2) {
+    background-color: hsla(39, 100%, 56%, .2);
+}
+
+.row:nth-child(2) .badge b {
+    color: var(--clr-orangey-yellow);
+}
+
+.row:nth-child(3) {
+    background-color: hsla(166, 100%, 37%, .2);
+}
+
+.row:nth-child(3) .badge b {
+    color: var(--clr-green-teal);
+}
+
+.row:nth-child(4) {
+    background-color: hsla(234, 85%, 45%, .2);
+}
+
+.row:nth-child(1) .badge b {
+    color: var(--clr-cobalt-blue);
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.row p {
+    color: hsl(0, 0%, 50%);
+}
+
+.row p b {
+    color: var(--clr-dark-gray-blue);
+}
+
+.btn {
+    margin-top: auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    background: var(--clr-dark-gray-blue);
+    cursor: pointer;
+    font-size: 1rem;
+    color: hsl(0, 0, 100%);
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, var(--clr-light-slate-blue-background),var(--clr-light-royal-blue-background));
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        align-items: flex-start;
+        background-color: hsl(0, 0, 100%);
+    }
+
+    .card {
+        box-shadow: none;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .result {
+        border-radius: 0 0 1rem 1rem;
+        width: 100%;
+    }
+
+    .result .info {
+        width: 250px;
+    }
+
+    .summary {
+        width: 100%;
+    }
+}
