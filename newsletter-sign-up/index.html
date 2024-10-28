@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <div id="container" class="container">
+    <div id="left" class="left">
+      <div class="left-info">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+      </div>
+
+      <form id="form-container">
+        <div class="form-item">
+          <label for="email">
+            <p>Email address</p>
+            <p id="invalid-email" class="invalid-email">Valid email required</p>
+          </label>
+          <input type="email" name="email" id="email" placeholder="email@company.com">
+        </div>
+
+        <div class="form-item">
+          <button id="submit-btn" type="submit">Subscribe to monthly newsletter</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="right" class="right">
+      <picture>
+        <img src="assets/images/illustration-sign-up-desktop.svg" alt="illustration-sign-up-desktop">
+      </picture>
+    </div>
+
+    <div id="confirmed-message" class="confirmed-message">
+      <img src="assets/images/icon-success.svg" alt="icon-success">
+      <h2>Thanks for subscribing!</h2>
+      <p>A confirmation email has been sent to <span id="user-email">ash@loremcompany.com</span>. Please
+      open it and click the button inside to confirm your subscription.</p>
+      <button id="dismiss-message">Dismiss message</button>
+    </div>
+  </div>
+  
+
+
+  
+  
+  <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p> 
+    <p>Coded by <a href="https://backendfrontflip.github.io/spacecadetio/Socials/socials.html?fbclid=PAZXh0bgNhZW0CMTEAAabFp9fEE_4fLr7EkFU_A5yVvNfuzEC3uf6EDpOGaX00M3Lfiur2U9GGGxI_aem_B8FgTY0lbmdS6kxU0xSgGw">Space Cadet</a>.</p>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
