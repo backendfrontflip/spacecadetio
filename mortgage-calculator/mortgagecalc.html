@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="mortgage.css">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="mortgage-container">
+    <div class="left">
+      <div class="header">
+        <h2>Mortgage Calculator</h2>
+        <button id="clear-btn">Clear All</button>
+      </div>
+      
+      <form class="mortgage-form">
+        <div class="form-item">
+          <label for="mortgage-amount" class="light-text">Mortgage Amount</label>
+          <div class="form-flex" id="mortgage-amount-main">
+            <p class="form-symbol">$</p>
+            <input id="mortgage-amount" name="mortgage-amount" required>
+          </div>
+
+          <p class="form-alert" id="amount-alert">This field is required</p>
+        </div>
+
+        <div class="form-item">
+          <div class="form-col">
+            <div class="form-item">
+              <label for="mortgage-term" class="light-text">Mortgage Term</label>
+              <div class="form-flex" id="mortgage-term-main">
+                <input type="number" id="mortgage-term" name="mortgage-term" required>
+                <p class="form-symbol">years</p>
+              </div>
+
+              <p class="form-alert" id="term-alert">This field is required</p>
+            </div>
+
+            <div class="form-item">
+              <label for="interest-rate" class="light-text">Interest Rate</label>
+              <div class="form-flex" id="interest-rate-main">
+                <input type="number" id="interest-rate" name="interest-rate" step="0.01" required>
+                <p class="form-symbol">%</p>
+              </div>
+
+              <p class="form-alert" id="rate-alert">This field is required</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-item">
+          <label for="" class="light-text">Mortgage Type</label>
+
+          <div class="radio-inputs">
+            <input type="radio" id="repayment" class="mortgage-type" name="mortgage-type" value="repayment" required>
+            <label for="repayment">Repayment</label>
+          </div>
+          
+          <div class="radio-inputs">
+            <input type="radio" id="interest-only" class="mortgage-type" name="mortgage-type" value="interest-only" required>
+            <label for="interest-only">Interest Only</label>
+          </div>
+        
+          <p class="form-alert" id="type-alert">This field is required</p>
+        </div>
+
+        <div class="form-item">
+          <button id="calculate-btn" class="calculate-btn" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="#133041" d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5
+              1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.
+              SV3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1
+              0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1
+              0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1
+              1 0-2.25 1.125 1.125 0 0 1 0 2.252M12 15a1.125 1.125 0 1 1
+              0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1
+              1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1
+              1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-. 
+              75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.
+              75 0 0 1 .75.75v3.752" />
+            </svg>
+            Calculate Repayments
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="right">
+      <div id="default-text" class="default-text">
+        <img src="assets/images/illustration-empty.svg" alt="illustration-empty">
+
+        <h2> Results shown here</h2>
+        <p class="light-text">Complete the form and click “calculate repayments” to see what 
+          your monthly repayments would be.</p>
+      </div>
+
+      <div id="calculations-container" class="calculations-container">
+        <h2>Your results</h2>
+
+        <p class="light-text"> Your results are shown below based on the information you provided. 
+          To adjust the results, edit the form and click “calculate repayments” again.</p>
+
+          <div class="calculations">
+            <div class="monthly">
+              <p class="light-text">Your monthly repayments</p>
+              <span id="result" class="monthly-result"></span>
+            </div>
+
+            <div class="line"></div>
+
+
+            <div class="total-term">
+              <p class="light-text">Total you'll repay over the term</p>
+              <span id="term-result" class="term-result"></span>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://backendfrontflip.github.io/spacecadetio/Socials/socials.html?fbclid=PAZXh0bgNhZW0CMTEAAabFp9fEE_4fLr7EkFU_A5yVvNfuzEC3uf6EDpOGaX00M3Lfiur2U9GGGxI_aem_B8FgTY0lbmdS6kxU0xSgGw">Space Cadet</a>.
+  </div>
+
+  <script src="mortgage.js"></script>
+</body>
+</html>
