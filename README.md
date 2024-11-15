@@ -1,4 +1,4 @@
-This repository is for future projects inspection. Click on the links below to see more projects
+This repository is for future projects inspection. Click on the links below to see the few I've done
 <li><a href="https://backendfrontflip.github.io/spacecadetio/BPC-main/">Blog Preview component</a></li>
 <li><a href="https://backendfrontflip.github.io/spacecadetio/Bentogrid/bento.html">Bento Grid Component</a></li>
 <li><a href="https://backendfrontflip.github.io/spacecadetio/QCS/mobile.html">QR Code Component</a></li>
