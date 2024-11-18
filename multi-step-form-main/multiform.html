@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="multiform.css">
+  <title>Frontend Mentor | Multi-step form</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .error { border-color: red; }
+    .error-message { color: red; display: none; font-size: 0.8em; }
+  </style>
+</head>
+<body>
+  <div class="form">
+    <div class="form-container">
+      <div class="left-sidebar">
+        <div class="step active">
+          <div class="round">1</div>
+          <div class="step-content">
+            <span>Step 1</span>
+            <b>Your info</b>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="round">2</div>
+          <div class="step-content">
+            <span>Step 2</span>
+            <b>Select plan</b>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="round">3</div>
+          <div class="step-content">
+            <span>Step 3</span>
+            <b>Add-ons</b>
+          </div>
+        </div>
+        <div class="step">
+          <div class="round">4</div>
+          <div class="step-content">
+            <span>Step 4</span>
+            <b>Summary</b>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 1 -->
+      <div class="stp step-1">
+        <div class="head">
+          <h1 class="title">Personal info</h1>
+          <p class="txt">Please provide your name, email address, and phone number.</p>
+        </div>
+        
+        <form>
+          <div class="label">
+            <label for="name">Name</label>
+            <p class="error-message">This field is required</p>
+          </div>
+          <input type="text" required id="name" placeholder="e.g. Stephen King">
+        
+          <div class="label">
+            <label for="email">Email Address</label>
+            <p class="error-message">This field is required</p>
+          </div>
+          <input type="email" required id="email" placeholder="e.g. stephenking@lorem.com">
+
+          <div class="label">
+            <label for="phone">Phone Number</label>
+            <p class="error-message">This field is required</p>
+          </div>
+          <input type="tel" required id="phone" placeholder="e.g. +1 234 567 890">
+    
+          <div class="button">
+            <button class="next-step" type="submit">Next Step</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="stp step-2" style="display: none;">
+        <div class="head">
+          <h1 class="title">Select your plan</h1>
+          <p class="txt">You have the option of monthly or yearly billing.</p>
+        </div>
+
+        <form>
+          <div class="plans selected">
+            <img src="assets/images/icon-arcade.svg" alt="Arcade">
+            <div class="plan-info">
+              <b>Arcade</b>
+              <span class="plan-priced">$9/mo</span>
+            </div>
+          </div>
+
+          <div class="plans">
+            <img src="assets/images/icon-advanced.svg" alt="Advanced">
+            <div class="plan-info">
+              <b>Advanced</b>
+              <span class="plan-priced">$12/mo</span>
+            </div>
+          </div>
+
+          <div class="plans">
+            <img src="assets/images/icon-pro.svg" alt="Pro">
+            <div class="plan-info">
+              <b>Pro</b>
+              <span class="plan-priced">$15/mo</span>
+            </div>
+          </div>
+        </form>
+        
+        <div class="switcher">
+          <p class="monthly sw-active">Monthly</p>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+          <p class="yearly">Yearly</p>
+        </div>
+        <div class="button">
+          <button class="previous-step" type="button">Go Back</button>
+          <button class="next-step" type="button">Next Step</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="stp step-3" style="display: none;">
+        <div class="head">
+          <h1 class="title">Pick add-ons</h1>
+          <p class="txt">Add-ons help enhance your gaming experience.</p>
+        </div>
+        <form>
+          <div class="box" data-id="1">
+            <input type="checkbox" id="online">
+            <div class="description">
+              <label for="online">Online service</label>
+              <small>Access to multiplayer games</small>
+            </div>
+            <p class="price">+$1/mo</p>
+          </div>
+          <div class="box" data-id="2">
+            <input type="checkbox" id="larger">
+            <div class="description">
+              <label for="larger">Larger storage</label>
+              <small>Extra 1TB of cloud storage</small>
+            </div>
+            <p class="price">+$2/mo</p>
+          </div>
+          <div class="box" data-id="3">
+            <input type="checkbox" id="custom">
+            <div class="description">
+              <label for="custom">Customizable Profile</label>
+              <small>Custom theme on your profile</small>
+            </div>
+            <p class="price">+$2/mo</p>
+          </div>
+        </form>
+        <div class="button">
+          <button class="previous-step" type="button">Go Back</button>
+          <button class="next-step" type="button">Next Step</button>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="stp step-4" style="display: none;">
+        <div class="head">
+          <h1 class="title">Finishing up</h1>
+          <p class="txt">Double-check everything looks OK before confirming.</p>
+        </div>
+        <div class="selection-box">
+          <div class="selection-container">
+            <div class="selected-plan">
+              <p class="plan-name">Arcade (Monthly)</p>
+              <p class="plan-price">$9/mo</p>
+            </div>
+            <hr>
+            <div class="addons"></div>
+          </div>
+          <p class="total">Total (per month/year): <b>$12/mo</b></p>
+        </div>
+        <div class="button">
+          <button class="previous-step" type="button">Go Back</button>
+          <button class="next-step" type="button">Confirm</button>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="stp step-5" style="display: none;">
+        <img src="assets/images/icon-thank-you.svg" alt="Thank you">
+        <div class="head">
+          <h1 class="title">Thank you!</h1>
+          <p class="txt">Thanks for confirming your subscription! If you need support, email us at support@loremgaming.com.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="multiform.js"></script>
+</body>
+</html>
