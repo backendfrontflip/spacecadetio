@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="card.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card-container">
+      <div class="left-side">
+        <div class="cards">
+          <div class="card-front">
+            <img src="images/bg-card-front.png" alt="card-front">
+            <div class="card-contain">
+              <img src="images/card-logo.svg" alt="card-logo" class="card-logo">
+              <h1 id="number">0000 0000 0000 0000</h1>
+              <div class="card-info">
+                <span id="name">Jane Appleseed</span>
+                <span id="date">
+                  <span id="month">00</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-back">
+            <img src="images/bg-card-back.png" alt="card-back">
+            <span id="cvc">000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <form>
+          <div class="grid-1">
+            <label for="card-name">Cardholder Name</label>
+            <input type="text" placeholder="e.g. Jane Appleseed" id="card-name" required>
+            <span class="error-message"></span>
+          </div>
+          
+          <div class="grid-2">
+            <label for="card-number">Card Number</label>
+            <input
+              type="number"
+              oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+              minlength="16"
+              maxlength="16"
+              placeholder="e.g. 1234 5678 9123 0000"
+              id="card-number"
+              required
+            >
+            <span class="error-message"></span>
+          </div>
+          
+          <div id="card-date">
+            <label for="card-date">Exp. Date (MM/YY)</label>
+            <div class="two-inp">
+              <div>
+                <input
+                  type="number"
+                  placeholder="MM"
+                  oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+                  maxlength="2"
+                  id="card-month"
+                  required
+                >
+                <span class="error-message"></span>
+              </div>
+              <div>
+                <input
+                  type="number"
+                  placeholder="YY"
+                  oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+                  maxlength="2"
+                  id="card-year"
+                  required
+                >
+                <span class="error-message"></span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="grid-3">
+            <label for="card-cvc">CVC</label>
+            <input
+              type="number"
+              placeholder="e.g. 123"
+              oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+              minlength="3"
+              maxlength="3"
+              id="card-cvc"
+              required
+            >
+            <span class="error-message"></span>
+          </div>
+          
+
+          <button type="submit" id="submit-btn">Confirm</button>
+        </form>
+
+        <div class="thanks hidden">
+          <img src="images/icon-complete.svg" alt="icon-complete">
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button>Continue</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://backendfrontflip.github.io/spacecadetio/Socials/socials.html?fbclid=PAZXh0bgNhZW0CMTEAAabFp9fEE_4fLr7EkFU_A5yVvNfuzEC3uf6EDpOGaX00M3Lfiur2U9GGGxI_aem_B8FgTY0lbmdS6kxU0xSgGw">Space Cadet</a>.
+  </div>
+
+  <script src="card.js"></script>
+</body>
+</html>
