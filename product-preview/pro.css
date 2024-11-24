@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    --clr-Dark-cyan: hsl(158, 36%, 37%);
+    --clr-Cream: hsl(30, 38%, 92%);
+    --clr-Very-dark-blue: hsl(212, 21%, 14%);
+    --clr-Dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Space Grotesk", serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-Cream);
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.product-card {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    background-color: var(--clr-White);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: row; 
+}
+
+.img {
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.card-details {
+    width: 50%;
+    padding: 2rem;
+    background-color: var(--clr-White);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.perfume {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--clr-Dark-grayish-blue);
+    letter-spacing: 3px;
+}
+
+.gab {
+    margin: 1rem 0;
+}
+
+.floral {
+    margin-bottom: 1rem;
+    color: var(--clr-Dark-grayish-blue);
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.prices h2 {
+    color: var(--clr-Dark-cyan);
+}
+
+.prices p {
+    text-decoration: line-through;
+    color: var(--clr-Dark-grayish-blue);
+}
+
+button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-White);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    background-color: var(--clr-Dark-cyan);
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--clr-Very-dark-blue);
+}
+
+@media screen and (max-width: 500px) {
+    .product-card {
+        max-width: 350px; 
+    }
+
+    .product-container {
+        flex-direction: column; 
+    }
+
+    .img {
+        background-image: url(images/image-product-mobile.jpg);
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .card-details {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .gab {
+        margin: 0.5rem 0;
+    }
+}
+
