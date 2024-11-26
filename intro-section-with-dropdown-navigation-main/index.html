@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+<body>
+  <nav>
+    <div class="navigation-container">
+      <div class="left">
+        <div class="nav-logo"><img src="images/logo.svg" alt="logo-svg"></div>
+        <ul class="nav-links">
+          <li>
+            Features
+            <img src="images/icon-arrow-down.svg" alt="icon-arrow-down">
+            <div class="menu one">
+              <p class="sub-link">
+                <img src="images/icon-todo.svg" alt="icon-todo">
+                Todo List
+              </p>
+
+              <p class="sub-link">
+                <img src="images/icon-calendar.svg" alt="icon-calender">
+                Calender
+              </p>
+
+              <p class="sub-link">
+                <img src="images/icon-reminders.svg" alt="icon-reminders">
+                Reminders
+              </p>
+
+              <p class="sub-link">
+                <img src="images/icon-planning.svg" alt="icon-planning">
+                Planning
+              </p>
+            </div>
+          </li>
+          <li>
+            Company
+            <img src="images/icon-arrow-down.svg" alt="icon-arrow-down">
+            <div class="menu two">
+              <p class="sub-link">
+                History
+              </p>
+  
+              <p class="sub-link">
+                Our Team
+              </p>
+  
+              <p class="sub-link">
+                Blog
+              </p>
+            </div>
+          </li>
+
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+      </div>
+
+      <div class="mobile-menu-btn">
+        <img src="images/icon-menu.svg" alt="icon-menu">
+      </div>
+
+      <div class="mobile-menu">
+        <ul class="mobile-links">
+          <li>
+            <p>
+              Features <img src="images/icon-arrow-down.svg" alt="icon-arrow-down"></p>
+            <div class="mobile-sub">
+              <p class="sub-link">
+                <img src="images/icon-todo.svg" alt="Todo"> Todo List
+              </p>
+
+              <p class="sub-link">
+                <img src="images/icon-calendar.svg" alt="Calender"> Calender
+              </p>
+
+              <p class="sub-link">
+                <img src="images/icon-reminders.svg" alt="Reminders"> Reminders
+              </p>
+
+              <p class="sub-link">
+                <img src="images/icon-planning.svg" alt="Planning"> Planning
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <p>Company <img src="images/icon-arrow-down.svg" alt="icon-arrow-down"></p>
+            <div class="mobile-sub">
+              <p class="sub-link">
+                History
+              </p>
+  
+              <p class="sub-link">
+                Our Team
+              </p>
+  
+              <p class="sub-link">
+                Blog
+              </p>
+            </div>
+           </li>
+
+         <li>Careers</li>
+         <li>About</li>
+        </ul>
+      </div>
+
+      <div class="right">
+        <button class="invisible-btn">Login</button>
+        <button class="register-btn">Register</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="main-container">
+      <div class="left-main">
+        <h1 class="heading-main">Make <br> remote work</h1>
+        <p class="content-main">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+        <button class="learn-btn">Learn more</button>
+
+        <div class="logos">
+          <img src="images/client-databiz.svg" alt="client-databiz">
+          <img src="images/client-audiophile.svg" alt="client-audiophile">
+          <img src="images/client-meet.svg" alt="client-meet">
+          <img src="images/client-maker.svg" alt="client-maker">
+        </div>
+      </div>
+
+      <div class="right-main">
+        <picture>
+          <source media="(max-width:800px)" src="./images/image-hero-mobile.png">
+          <img src="images/image-hero-desktop.png" alt="hero">
+        </picture>
+      </div>
+    </div>
+  </main>
+  <div class="overflow-hidden"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
