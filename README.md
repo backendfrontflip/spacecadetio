@@ -18,5 +18,8 @@ This repository is for future projects inspection. Click on the links below to s
 <li><a href="https://backendfrontflip.github.io/spacecadetio/notifications-page-main/notifs.html">Notification Page</a></li>
 <li><a href="https://backendfrontflip.github.io/spacecadetio/interactive-comments-section-main/index.html">Interactive Comment Section</a></li>
 <li><a href="https://backendfrontflip.github.io/space-tourism-website/">Space Tourism Website</a></li>
+<li><a href="https://backendfrontflip.github.io/expense-chart/">Expense Chart</a></li>
+<li><a href="https://backendfrontflip.github.io/sign-up-form/">Sign Up Form</a></li>
+<li><a href="https://backendfrontflip.github.io/rest-countries/">Rest Countries API</a></li>
 Discord: backendfrontflip
 IG: @codespacecadet
